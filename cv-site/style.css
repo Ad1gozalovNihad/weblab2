@@ -129,7 +129,7 @@ body {
 }
 
 .add-btn, .save-btn, .cancel-btn, .remove-btn {
-  background-color: #1e2c3a;
+  background-color: #39a1f0;
   color: #fff;
   border: none;
   padding: 7px 15px;
@@ -172,15 +172,3 @@ textarea {
   display: none;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-  .sidebar {
-    padding: 20px;
-  }
-  .main {
-    padding: 20px;
-  }
-}
