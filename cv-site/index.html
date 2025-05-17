@@ -10,19 +10,33 @@
 <body>
   <div class="container">
     <div class="sidebar">
-        <img class="profile-pic" src="images/helpdesk.png" alt="Profile Picture" />
+      <img class="profile-pic" src="images/helpdesk.png" alt="Profile Picture" />
+      
       <h3>Contact</h3>
-      <p>+994 55 607 12 57</p>
-      <p>adigozelovnihad113@gmail.com</p>
-      <p>Baki şəhəri, Nizami rayonu, Keşlə qəsəbəsi, Pəhlivan Fərzəliyev 160</p>
-      <div class="education"> 
-      <h3>Education</h3>
-      <p>2024 - 2028<br />Azərbaycan Texniki Universiteti<br />İnformasiya təhlükəsizliyi</p>
-      <p>2024 - 2025<br />IKT lab təlim və tədris mərkəzi<br />İT Specialist</p>
+      <ul id="contact-list">
+        <li>+994 55 607 12 57</li>
+        <li>adigozelovnihad113@gmail.com</li>
+        <li>Baki şəhəri, Nizami rayonu, Keşlə qəsəbəsi, Pəhlivan Fərzəliyev 160</li>
+      </ul>
+      <div id="contact-input" class="input-box">
+        <input type="text" id="new-contact" placeholder="Əlaqə əlavə et..." />
+        <button onclick="confirmAdd('contact')">Təsdiqlə</button>
       </div>
-    
+      <button onclick="showInput('contact')">Əlaqə Əlavə Et</button>
+
+      <h3>Education</h3>
+      <ul id="education-list">
+        <li>2024 - 2028, AzTU - İnformasiya təhlükəsizliyi</li>
+        <li>2024 - 2025, İKT lab - İT Specialist</li>
+      </ul>
+      <div id="education-input" class="input-box">
+        <input type="text" id="new-education" placeholder="Təhsil əlavə et..." />
+        <button onclick="confirmAdd('education')">Təsdiqlə</button>
+      </div>
+      <button onclick="showInput('education')">Təhsil Əlavə Et</button>
+
       <h3>Skills</h3>
-      <ul>
+      <ul id="skills-list">
         <li>Əməliyyat Sistemləri və Proqram Təminatı</li>
         <li>Hardware və Troubleshooting</li>
         <li>Təhlükəsizlik və Məlumat Bərpası</li>
@@ -32,39 +46,63 @@
         <li>Başlanğıc səviyyədə şəbəkə bilikləri</li>
         <li>Hireboot</li>
       </ul>
- 
+      <div id="skills-input" class="input-box">
+        <input type="text" id="new-skills" placeholder="Bacarıq əlavə et..." />
+        <button onclick="confirmAdd('skills')">Təsdiqlə</button>
+      </div>
+      <button onclick="showInput('skills')">Bacarıq Əlavə Et</button>
+
       <h3>Languages</h3>
-      <ul>
+      <ul id="languages-list">
         <li>English (technical)</li>
         <li>Russian (technical)</li>
       </ul>
+      <div id="languages-input" class="input-box">
+        <input type="text" id="new-languages" placeholder="Dil əlavə et..." />
+        <button onclick="confirmAdd('languages')">Təsdiqlə</button>
+      </div>
+      <button onclick="showInput('languages')">Dil Əlavə Et</button>
     </div>
+
     <div class="main">
       <h1><b>Nihad</b> <b>Adigozelov</b></h1>
       <h2><b>IT Specialist</b></h2>
+      
       <div class="section-title">Profile</div>
-      <p>İT sahəsində təhsil alan, texnologiyalara maraqlı və öyrənməyə həvəsli bir tələbəyəm. Praktiki bacarıqlarımı inkişaf etdirmək və real layihələrdə iştirak etmək üçün fürsətlər axtarıram. Komanda ilə işləmə və problemləri həll etmə bacarığım güclüdür.</p>
+      <ul id="profile-list">
+        <li>İT sahəsində təhsil alan, texnologiyalara maraqlı və öyrənməyə həvəsli bir tələbəyəm.</li>
+        <li>Praktiki bacarıqlarımı inkişaf etdirmək və real layihələrdə iştirak etmək üçün fürsətlər axtarıram.</li>
+      </ul>
+      <div id="profile-input" class="input-box">
+        <input type="text" id="new-profile" placeholder="Profil mətni əlavə et..." />
+        <button onclick="confirmAdd('profile')">Təsdiqlə</button>
+      </div>
+      <button onclick="showInput('profile')">Profil Əlavə Et</button>
+
       <div class="section-title">Work Experience</div>
-      <div class="job"></div>
-      <div class="job">
-        <h4>Faiqoglu MMC</h4>
-        <ul>
-          <li>İT specialist</li>
-        </ul>
-         <h4>Ulduz şokalad fabriki</h4>
-        <ul>
-          <li>System Administrator</li>
-        </ul>
-         <h4>Bravo Market</h4>
-        <ul>
-          <li>Sistem infrastrukturunun qurulması</li>
-        </ul>
+      <ul id="experience-list">
+        <li>Faiqoglu MMC - İT specialist</li>
+        <li>Ulduz şokalad fabriki - System Administrator</li>
+        <li>Bravo Market - Sistem infrastrukturunun qurulması</li>
+      </ul>
+      <div id="experience-input" class="input-box">
+        <input type="text" id="new-experience" placeholder="İş təcrübəsi əlavə et..." />
+        <button onclick="confirmAdd('experience')">Təsdiqlə</button>
       </div>
+      <button onclick="showInput('experience')">İş Təcrübəsi Əlavə Et</button>
+
       <div class="section-title">Reference</div>
-      <div class="reference">
-        <p><strong>Cebiyev Kamil</strong><br />20-ci sahe, 223<br />faiqoglu.mmc@gmail.com</p>
+      <ul id="reference-list">
+        <li>Cebiyev Kamil, 20-ci sahe, 223, faiqoglu.mmc@gmail.com</li>
+      </ul>
+      <div id="reference-input" class="input-box">
+        <input type="text" id="new-reference" placeholder="Referans əlavə et..." />
+        <button onclick="confirmAdd('reference')">Təsdiqlə</button>
       </div>
+      <button onclick="showInput('reference')">Referans Əlavə Et</button>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
