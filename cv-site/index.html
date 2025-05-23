@@ -11,37 +11,37 @@
     <div class="sidebar">
       <img class="profile-pic" src="images/helpdesk.png" alt="Profile Picture" />
 
-      <div class="sidebar-section">
-        <button class="accordion" type="button">Contact</button>
-        <div class="panel">
-          <p>+994 55 607 12 57</p>
-          <p>adigozelovnihad113@gmail.com</p>
-          <p>Baki şəhəri, Nizami rayonu, Keşlə qəsəbəsi, Pəhlivan Fərzəliyev 160</p>
+      <div class="dropdown-section">
+        <h3 class="dropdown-toggle" data-target="contact-list">Contact <span class="arrow">&#9660;</span></h3>
+        <div id="contact-list" class="dropdown-content closed">
+          <ul id="contact-ul">
+            <li>+994 55 607 12 57</li>
+            <li>adigozelovnihad113@gmail.com</li>
+            <li>Baki şəhəri, Nizami rayonu, Keşlə qəsəbəsi, Pəhlivan Fərzəliyev 160</li>
+          </ul>
+          <button class="add-btn" onclick="addContact()">+</button>
         </div>
       </div>
 
-      <div class="sidebar-section">
-        <button class="accordion" type="button">Education</button>
-        <div class="panel">
-          <div id="education-section">
-            <p>2024 - 2028<br />Azərbaycan Texniki Universiteti<br />İnformasiya təhlükəsizliyi</p>
-            <p>2024 - 2025<br />IKT lab təlim və tədris mərkəzi<br />İT Specialist</p>
-          </div>
-          <button id="add-education-btn" class="add-btn">Yeni Təhsil Əlavə Et</button>
-          <div id="education-form" class="hidden">
-            <input type="text" id="edu-years" placeholder="İllər (məs: 2024-2028)" />
-            <input type="text" id="edu-school" placeholder="Təhsil müəssisəsi" />
-            <input type="text" id="edu-specialty" placeholder="İxtisas" />
-            <button id="save-education-btn" class="save-btn">Əlavə et</button>
-            <button id="cancel-education-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+      <div class="dropdown-section">
+        <h3 class="dropdown-toggle" data-target="education-list">Education <span class="arrow">&#9660;</span></h3>
+        <div id="education-list" class="dropdown-content closed">
+          <ul id="education-ul">
+            <li>
+              <span>2024 - 2028<br />Azərbaycan Texniki Universiteti<br />İnformasiya təhlükəsizliyi</span>
+            </li>
+            <li>
+              <span>2024 - 2025<br />IKT lab təlim və tədris mərkəzi<br />İT Specialist</span>
+            </li>
+          </ul>
+          <button class="add-btn" onclick="addEducation()">+</button>
         </div>
       </div>
-
-      <div class="sidebar-section">
-        <button class="accordion" type="button">Skills</button>
-        <div class="panel">
-          <ul id="skills-section">
+      
+      <div class="dropdown-section">
+        <h3 class="dropdown-toggle" data-target="skills-list">Skills <span class="arrow">&#9660;</span></h3>
+        <div id="skills-list" class="dropdown-content closed">
+          <ul id="skills-ul">
             <li>Əməliyyat Sistemləri və Proqram Təminatı</li>
             <li>Hardware və Troubleshooting</li>
             <li>Təhlükəsizlik və Məlumat Bərpası</li>
@@ -51,58 +51,43 @@
             <li>Şəbəkə bilikləri (başlanğıc səviyyə)</li>
             <li>Hireboot</li>
           </ul>
-          <button id="add-skill-btn" class="add-btn">Yeni Bacarıq Əlavə Et</button>
-          <div id="skill-form" class="hidden">
-            <input type="text" id="skill-input" placeholder="Bacarıq" />
-            <button id="save-skill-btn" class="save-btn">Əlavə et</button>
-            <button id="cancel-skill-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+          <button class="add-btn" onclick="addSkill()">+</button>
         </div>
       </div>
 
-      <div class="sidebar-section">
-        <button class="accordion" type="button">Languages</button>
-        <div class="panel">
-          <ul id="languages-section">
+      <div class="dropdown-section">
+        <h3 class="dropdown-toggle" data-target="languages-list">Languages <span class="arrow">&#9660;</span></h3>
+        <div id="languages-list" class="dropdown-content closed">
+          <ul id="languages-ul">
             <li>Azərbaycan dili (ana dili)</li>
             <li>English (technical)</li>
             <li>Russian (technical)</li>
           </ul>
-          <button id="add-language-btn" class="add-btn">Yeni Dil Əlavə Et</button>
-          <div id="language-form" class="hidden">
-            <input type="text" id="language-input" placeholder="Dil və səviyyə" />
-            <button id="save-language-btn" class="save-btn">Əlavə et</button>
-            <button id="cancel-language-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+          <button class="add-btn" onclick="addLanguage()">+</button>
         </div>
       </div>
     </div>
-
+    
     <div class="main">
       <h1><b>Nihad Adigozelov</b></h1>
       <h2><b>IT Specialist</b></h2>
 
-      <div class="main-section">
-        <button class="accordion" type="button">Profile</button>
-        <div class="panel">
-          <div class="section-title">Profile</div>
-          <p id="profile-text">
-            İT sahəsində təhsil alan, texnologiyalara maraqlı və öyrənməyə həvəsli bir tələbəyəm. Praktiki bacarıqlarımı inkişaf etdirmək və real layihələrdə iştirak etmək üçün çalışıram.
-          </p>
-          <button id="edit-profile-btn" class="add-btn">Profili Redaktə Et</button>
-          <div id="profile-form" class="hidden">
-            <textarea id="profile-input"></textarea>
-            <button id="save-profile-btn" class="save-btn">Yadda saxla</button>
-            <button id="cancel-profile-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+      <div class="dropdown-section">
+        <div class="section-title dropdown-toggle" data-target="profile-section">Profile <span class="arrow">&#9660;</span></div>
+        <div id="profile-section" class="dropdown-content closed">
+          <ul id="profile-ul">
+            <li>
+              <span>İT sahəsində təhsil alan, texnologiyalara maraqlı və öyrənməyə həvəsli bir tələbəyəm. Praktiki bacarıqlarımı inkişaf etdirmək və real layihələrdə iştirak etmək üçün daim öz üzərimdə çalışıram.</span>
+            </li>
+          </ul>
+          <button class="add-btn" onclick="addProfile()">+</button>
         </div>
       </div>
-
-      <div class="main-section">
-        <button class="accordion" type="button">Work Experience</button>
-        <div class="panel">
-          <div class="section-title">Work Experience</div>
-          <div id="work-section">
+      
+      <div class="dropdown-section">
+        <div class="section-title dropdown-toggle" data-target="work-list">Work Experience <span class="arrow">&#9660;</span></div>
+        <div id="work-list" class="dropdown-content closed">
+          <div id="jobs-container">
             <div class="job">
               <h4>Faiqoglu MMC</h4>
               <div class="job-period">İyun 2023 - İndiki zaman</div>
@@ -131,34 +116,25 @@
               </ul>
             </div>
           </div>
-          <button id="add-work-btn" class="add-btn">Yeni İş Əlavə Et</button>
-          <div id="work-form" class="hidden">
-            <input type="text" id="work-company" placeholder="Şirkət" />
-            <input type="text" id="work-period" placeholder="Dövriyyə (məs: 2022 - 2023)" />
-            <textarea id="work-description" placeholder="Vəzifə və iş təsviri"></textarea>
-            <button id="save-work-btn" class="save-btn">Əlavə et</button>
-            <button id="cancel-work-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+          <button class="add-btn" onclick="addJob()">+</button>
         </div>
       </div>
-
-      <div class="main-section">
-        <button class="accordion" type="button">References</button>
-        <div class="panel">
-          <div class="section-title">References</div>
-          <div class="reference" id="reference-section">
-            <p><strong>Cebiyev Kamil</strong><br />IT Manager, Faiqoglu MMC<br />20-ci sahe, 223<br />Tel: +994 50 211 12 99<br />faiqoglu.mmc@gmail.com</p>
-          </div>
-          <button id="add-reference-btn" class="add-btn">Yeni Referans Əlavə Et</button>
-          <div id="reference-form" class="hidden">
-            <input type="text" id="ref-name" placeholder="Ad və soyad" />
-            <input type="text" id="ref-position" placeholder="Vəzifə və şirkət" />
-            <input type="text" id="ref-address" placeholder="Ünvan" />
-            <input type="text" id="ref-phone" placeholder="Telefon" />
-            <input type="text" id="ref-email" placeholder="E-mail" />
-            <button id="save-reference-btn" class="save-btn">Əlavə et</button>
-            <button id="cancel-reference-btn" class="cancel-btn">Ləğv et</button>
-          </div>
+      
+      <div class="dropdown-section">
+        <div class="section-title dropdown-toggle" data-target="references-section">References <span class="arrow">&#9660;</span></div>
+        <div id="references-section" class="dropdown-content closed">
+          <ul id="references-ul">
+            <li>
+              <span>
+                <strong>Cebiyev Kamil</strong><br />
+                IT Manager, Faiqoglu MMC<br />
+                20-ci sahe, 223<br />
+                Tel: +994 50 211 12 99<br />
+                faiqoglu.mmc@gmail.com
+              </span>
+            </li>
+          </ul>
+          <button class="add-btn" onclick="addReference()">+</button>
         </div>
       </div>
     </div>
